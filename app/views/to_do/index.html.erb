@@ -1,3 +1,5 @@
-<% @to_dos.each do |to_do| %>
-  <%= render partial: 'to_do', locals: {todo: to_do} %>
-<% end %>
+<div id="to_do_list">
+  <% @to_dos.each do |to_do| %>
+    <%= render partial: 'to_do', locals: {todo: to_do} %>
+  <% end %>
+</div>

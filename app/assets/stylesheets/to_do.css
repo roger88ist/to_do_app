@@ -1,0 +1,10 @@
+div#to_do_list {
+  width: 500px;
+  margin: auto;
+}
+
+div.to_do_item {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
