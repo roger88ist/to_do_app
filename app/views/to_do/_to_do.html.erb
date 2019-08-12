@@ -2,4 +2,8 @@
   Task: <b><%= todo.task %></b>
   </br>
   Group: <b><%= todo.group.name %></b>
+  </br>
+  <% if todo.completed %>
+    Complete At: <b><%= todo.completed_at %></b>
+  <% end %>
 </div>
