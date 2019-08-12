@@ -1,4 +1,6 @@
 <div id="<%= "to_do_#{todo.id}" %>" class="to_do_item">
+  <%= check_box_tag("completed_to_do_#{todo.id}") %>
+  </br>
   Task: <b><%= todo.name %></b>
   </br>
   Group: <b><%= todo.group.name %></b>
