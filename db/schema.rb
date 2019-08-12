@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190812122039) do
+ActiveRecord::Schema.define(version: 20190812124745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20190812122039) do
   create_table "pretasks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "to_do_id"
+    t.integer "task_id"
+    t.index ["to_do_id"], name: "index_pretasks_on_to_do_id"
   end
 
   create_table "to_dos", force: :cascade do |t|
@@ -36,5 +39,6 @@ ActiveRecord::Schema.define(version: 20190812122039) do
     t.index ["group_id"], name: "index_to_dos_on_group_id"
   end
 
+  add_foreign_key "pretasks", "to_dos"
   add_foreign_key "to_dos", "groups"
 end
