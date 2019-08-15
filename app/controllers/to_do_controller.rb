@@ -1,6 +1,6 @@
 class ToDoController < ApplicationController
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.all.order(:created_at)
   end
 
   def update
