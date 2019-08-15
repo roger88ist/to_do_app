@@ -3,6 +3,7 @@ function updateToDo(element) {
   $.ajax({
     url: '/to_do/' + id,
     type: 'PUT',
+    datatype: 'html',
     data: {
       completed: element.checked
     }
