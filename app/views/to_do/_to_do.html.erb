@@ -1,5 +1,9 @@
 <div id="<%= "to_do_#{todo.id}" %>" class="to_do_item">
-  <%= check_box_tag("completed_to_do_#{todo.id}") %>
+  <%= check_box_tag("completed_to_do_#{todo.id}",
+                    "1",
+                    false,
+                    class: 'check_box_tag',
+                    onClick: 'updateToDo(this);') %>
   </br>
   Task: <b><%= todo.name %></b>
   </br>
